@@ -1,0 +1,41 @@
+{
+  "name": "@strawdev/resend-tui",
+  "version": "0.1.0-rc.1",
+  "description": "Read and inspect email from the Convex Resend component.",
+  "homepage": "https://github.com/battlemagedotapp/resend-tui#readme",
+  "bugs": "https://github.com/battlemagedotapp/resend-tui/issues",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/battlemagedotapp/resend-tui.git"
+  },
+  "bin": {
+    "resend-tui": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./links": {
+      "types": "./dist/links.d.ts",
+      "import": "./dist/links.js"
+    }
+  },
+  "dependencies": {
+    "@opentui/core": "0.5.9",
+    "@opentui/react": "0.5.9",
+    "open": "10.2.0",
+    "react": "19.2.3"
+  },
+  "engines": {
+    "node": ">=24 <25"
+  }
+}
