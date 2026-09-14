@@ -195,6 +195,8 @@ describe.sequential("mailbox client", () => {
 
   test("distinguishes malformed component output and command failures", async () => {
     const mailbox = createMailbox({ projectDirectory, deployment: "dev" });
+    await writeFixture({ raw: "" });
+    await expect(mailbox.listEmails()).resolves.toEqual([]);
     await writeFixture({ raw: "not-json" });
     await expect(mailbox.listEmails()).rejects.toMatchObject({ code: "invalid_output" });
     await writeFixture({ stderr: "component unavailable" });

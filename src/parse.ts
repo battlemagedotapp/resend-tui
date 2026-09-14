@@ -85,6 +85,8 @@ function parseSummary(value: unknown): EmailSummary {
 }
 
 export function parseEmailList(output: string): EmailSummary[] {
+  // `convex data` exits successfully with no stdout when the selected table is empty.
+  if (output.trim() === "") return [];
   const value = parseJson(output);
   if (!Array.isArray(value)) fail("Convex returned an invalid mailbox snapshot.");
   return value.map((email) => {
