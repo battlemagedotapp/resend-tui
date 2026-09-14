@@ -97,7 +97,13 @@ const terminal = spawnSync("bun", [join(installedRoot, "dist/terminal/main.js")]
   encoding: "utf8",
   env: { ...process.env, RESEND_TUI_OPTIONS: "" },
 });
-if (terminal.status === 0 || !terminal.stderr.includes("must be started through its executable")) {
+if (terminal.error && "code" in terminal.error && terminal.error.code === "ENOENT") {
+  throw new Error("Bun is required to verify the packaged terminal entry.");
+}
+if (
+  terminal.status === 0 ||
+  !(terminal.stderr ?? "").includes("must be started through its executable")
+) {
   throw new Error("The packaged Bun terminal entry did not initialize as expected.");
 }
 console.log(
