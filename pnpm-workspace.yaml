@@ -1,0 +1,5 @@
+allowBuilds:
+  esbuild: true
+peerDependencyRules:
+  allowedVersions:
+    "bun-ffi-structs@0.3.1>typescript": "6"

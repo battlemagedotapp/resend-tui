@@ -1,0 +1,4 @@
+{
+  "ignorePatterns": ["artifacts/**", "dist/**"],
+  "publicPackages": ["@strawdev/resend-tui"]
+}
