@@ -77,6 +77,15 @@ execFileSync(
   ],
   { cwd: directory, stdio: "inherit" },
 );
+execFileSync(
+  process.execPath,
+  [
+    "--input-type=commonjs",
+    "--eval",
+    "const {createMailbox}=require('@strawdev/resend-tui'); createMailbox({projectDirectory:'.',deployment:'local'});",
+  ],
+  { cwd: directory, stdio: "inherit" },
+);
 const result = await build({
   stdin: { contents: "export * from '@strawdev/resend-tui';", resolveDir: directory },
   bundle: true,

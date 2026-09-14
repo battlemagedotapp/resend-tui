@@ -1,6 +1,6 @@
 {
   "name": "@strawdev/resend-tui",
-  "version": "0.1.0-rc.2",
+  "version": "0.1.0-rc.3",
   "description": "Read and inspect email from the Convex Resend component.",
   "homepage": "https://github.com/battlemagedotapp/resend-tui#readme",
   "bugs": "https://github.com/battlemagedotapp/resend-tui/issues",
@@ -22,18 +22,20 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     },
     "./links": {
       "types": "./dist/links.d.ts",
-      "import": "./dist/links.js"
+      "import": "./dist/links.js",
+      "require": "./dist/links.cjs"
     }
   },
   "scripts": {
     "format": "oxfmt --write .",
     "check": "pnpm build && tsc --noEmit && oxlint . && oxfmt --check .",
     "test": "vitest run",
-    "build": "tsc -p tsconfig.build.json && node tools/make-executable.mjs",
+    "build": "tsc -p tsconfig.build.json && node tools/build-cjs.mjs && node tools/make-executable.mjs",
     "verify": "pnpm check && pnpm test",
     "test:integration": "pnpm build && node tools/component-proof.mjs",
     "test:package": "node tools/package-check.mjs",
