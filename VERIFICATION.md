@@ -1,5 +1,11 @@
 # Verification
 
+## v0.1.1-rc.1 — 2026-09-15
+
+- Message detail refreshes now update delivery and activity metadata as well as message content.
+- Package and Git-installation fixtures use the system temporary directory instead of accumulating
+  ignored release directories in the source checkout.
+
 ## v0.1.0 — 2026-09-14
 
 The implementation qualified as `v0.1.0-rc.3` (source

@@ -79,7 +79,10 @@ function useDetail(mailbox: Mailbox) {
       try {
         const result = await mailbox.getEmail(selected.id);
         if (!result) throw new Error("This email is no longer available.");
-        if (id === request.current) setEmail(result);
+        if (id === request.current) {
+          setEmail(result);
+          setSummary(result);
+        }
       } catch (cause) {
         if (id === request.current) setError(messageFrom(cause));
       } finally {
