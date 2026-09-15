@@ -1,10 +1,17 @@
 # Verification
 
-## v0.1.1-rc.1 — 2026-09-15
+## v0.1.1 — 2026-09-15
 
-- Message detail refreshes now update delivery and activity metadata as well as message content.
+The implementation qualified as `v0.1.1-rc.1` (source
+`fb6e4b6aaf4864178467b0d0d6c41692ebcbe1d0`). Stable changes only the version and this record.
+
+- Message detail refreshes update delivery and activity metadata as well as message content.
 - Package and Git-installation fixtures use the system temporary directory instead of accumulating
   ignored release directories in the source checkout.
+- `pnpm verify`, `pnpm test:package`, and `pnpm test:git` passed; the component list/wait/detail proof
+  passed in 9.3 seconds against `uncommon-gopher-566`.
+- Auth Client's delivered invitation/verification journey passed in 46.2 seconds. Gaia's two
+  retained development email journeys passed in 2.7 minutes against `peaceful-pig-630`.
 
 ## v0.1.0 — 2026-09-14
 
