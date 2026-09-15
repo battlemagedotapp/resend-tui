@@ -1,13 +1,13 @@
 {
   "name": "@strawdev/resend-tui",
-  "version": "0.1.1",
+  "version": "0.1.2-rc.1",
   "description": "Read and inspect email from the Convex Resend component.",
-  "homepage": "https://github.com/battlemagedotapp/resend-tui#readme",
-  "bugs": "https://github.com/battlemagedotapp/resend-tui/issues",
+  "homepage": "https://github.com/strawdotdev/resend-tui#readme",
+  "bugs": "https://github.com/strawdotdev/resend-tui/issues",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/battlemagedotapp/resend-tui.git"
+    "url": "git+https://github.com/strawdotdev/resend-tui.git"
   },
   "bin": {
     "resend-tui": "./dist/cli.js"

@@ -7,10 +7,10 @@ Read email stored by [`@convex-dev/resend`](https://github.com/get-convex/resend
 Install a compiled release tag. Consumers do not build this package.
 
 ```sh
-pnpm add -D '@strawdev/resend-tui@github:battlemagedotapp/resend-tui#v0.1.0'
+pnpm add -D '@strawdev/resend-tui@github:strawdotdev/resend-tui#v0.1.2-rc.1'
 ```
 
-The consuming Convex project must install `convex` and mount `@convex-dev/resend`. Version 0.1.0 is qualified with Convex 1.45.0 and `@convex-dev/resend` 0.2.7.
+The consuming Convex project must install `convex` and mount `@convex-dev/resend`. This release is qualified with Convex 1.45.0 and `@convex-dev/resend` 0.2.7.
 
 ## Programmatic use
 
