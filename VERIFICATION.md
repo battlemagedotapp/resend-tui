@@ -1,5 +1,11 @@
 # Verification
 
+## v0.1.2-rc.1 — 2026-09-15
+
+Ownership moved to `strawdotdev/resend-tui`. Package metadata and installation guidance now resolve
+directly to the canonical repository; runtime behavior is unchanged. `pnpm verify`,
+`pnpm test:package`, and `pnpm test:git` passed after the transfer.
+
 ## v0.1.1 — 2026-09-15
 
 The implementation qualified as `v0.1.1-rc.1` (source
